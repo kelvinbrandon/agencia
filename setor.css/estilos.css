@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #111;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff6347;
+}
+
+
+
+body {
+    padding-top: 70px;
+}
+
+
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+
+.hero {
+    background: url("../setor.css/imagem/fundo.jpg") no-repeat center center/cover;
+    color: white;
+}
+
+.hero-conteudo {
+    text-align: center;
+    max-width: 600px;
+
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+
+}
+
+
+
+
+.botao {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff6600;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+.botao:hover {
+    background-color: #ff4500;
+}
+
+
+.servicos {
+    padding: 80px 40px;
+    background-color: #f5f5f5;
+    text-align: center;
+
+}
+
+
+.servicos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+
+}
+
+.card p {
+    font-size: 0, 95rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.sobre {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+
+.sobre-container {
+    display: flex;
+    /* Adiciona flexbox para layout */
+    align-items: center;
+    /* Alinha os itens verticalmente */
+    gap: 40px;
+    /* Espaçamento entre os itens */
+
+    max-width: 1200px;
+    /* Limita a largura máxima do container */
+    margin: 0 auto;
+    /* Centraliza o container horizontalmente */
+}
+
+
+.sobre-texto {
+    flex: 1;
+    /* Permite que o texto ocupe o espaço disponível */
+}
+
+.sobre-texto h2 {
+    font-size: 2.5rem;
+    /* Tamanho da fonte para o título da seção "Sobre Nós" */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do título da seção "Sobre Nós" */
+}
+
+.sobre-texto p {
+    line-height: 1.6;
+    /* Melhora a legibilidade do texto */
+    margin-bottom: 15px;
+    /* Espaçamento abaixo de cada parágrafo */
+}
+
+.sobre-imagem {
+    flex: 1;
+    /* Permite que a imagem ocupe o espaço disponível */
+    min-height: 350px;
+    /* Define uma altura mínima para a imagem, garantindo que ela seja visível mesmo em telas menores */
+
+    background: url("../setor.css/imagem/equipe.jpg") center/cover;
+    /* Define a imagem de fundo para a seção "Sobre Nós" e ajusta seu posicionamento e tamanho */
+
+    border-radius: 15px;
+    /* Adiciona bordas arredondadas à imagem */
+
+    transition: 0.4s;
+}
+
+.sobre-imagem:hover {
+    transform: scale(1.03);
+}
+
+.sobre-imagem {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-imagem {
+    position: relative;
+    /* Permite posicionar elementos filhos de forma absoluta em relação a esta imagem */
+    overflow: hidden;
+    /* Garante que qualquer conteúdo que ultrapasse os limites da imagem seja ocultado */
+}
+
+.sobre-imagem::after {
+    content: "";
+    /* Cria um pseudo-elemento para o efeito de overlay */
+    position: absolute;
+    /* Posiciona o pseudo-elemento de forma absoluta em relação à imagem */
+    inset: 0;
+    /* Faz com que o pseudo-elemento cubra toda a área da imagem */
+
+    background: rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.sobre-imagem:hover::after {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        /* Altera para layout em coluna em telas menores */
+    }
+}
+
+
+
+.depoimentos {
+    padding: 80px 20px;
+    /* Espaçamento interno para a seção de depoimentos */
+    background-color: #f5f5f5;
+    /* Cor de fundo para a seção de depoimentos */
+    text-align: center;
+    /* Centraliza o texto dentro da seção de depoimentos */
+}
+
+
+.depoimentos h2 {
+    font-size: 2.5rem;
+    /* Tamanho da fonte para o título dos depoimentos */
+    margin-bottom: 40px;
+    /* Espaçamento abaixo do título dos depoimentos */
+}
+
+
+.depoimentos-container {
+    display: grid;
+    /* Utiliza grid layout para organizar os depoimentos */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Define colunas responsivas para os depoimentos */
+    gap: 20px;
+    /* Espaçamento entre os depoimentos */
+
+    max-width: 1200px;
+    /* Limita a largura máxima do container de depoimentos */
+    margin: auto;
+    /* Centraliza o container de depoimentos horizontalmente */
+}
+
+
+
+.depoimento {
+    background: white;
+    /* Cor de fundo para cada depoimento */
+    padding: 20px;
+    /* Espaçamento interno para cada depoimento */
+    border-radius: 10px;
+    /* Adiciona bordas arredondadas aos depoimentos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona sombra para dar profundidade aos depoimentos */
+    transition: 0.3s;
+    /* Adiciona uma transição suave para efeitos de hover */
+}
+
+
+.depoimento:hover {
+    transform: translateY(-5px);
+    /* Move o depoimento para cima quando o mouse passar sobre ele */
+}
+
+
+.depoimento p {
+    font-style: italic;
+    /* Estiliza o texto do depoimento em itálico */
+    margin-bottom: 15px;
+    /* Espaçamento abaixo do texto do depoimento */
+}
+
+.depoimento h4 {
+    color: #ff6347;
+    /* Cor para o nome do cliente no depoimento */
+}
+
+.depoimento p::before {
+    content: "“";
+    font-size: 2rem;
+    color: #ff6347;
+}
+
+
+
+.contato {
+    padding: 50px 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+
+.contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+
+.contato-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+
+.contato-info {
+    flex: 1;
+    text-align: left;
+}
+
+.formulario {
+    gap: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario input,
+.formulario textarea {
+
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+
+.formulario textarea {
+    resize: none;
+    /* Impede que o usuário redimensione a área de texto */
+    height: 120px;
+    /* Define uma altura fixa para a área de texto */
+
+}
+
+.formulario button {
+    padding: 14px;
+    font-width: bold;
+    background: #ff6347;
+    color: white;
+    border: none;
+    /* Remove a borda padrão do botão */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* Adiciona uma transição suave para efeitos de hover */
+
+}
+
+.formulario button:hover {
+    background: #e5533d;
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+    }
+}
+
+.formulario input:hover,
+.formulario textarea:hover {
+    border-color: #ff6347;
+}
+
+
+
+.footer {
+    background: linear-gradient(120deg, #000, #222);
+
+    background: #111;
+    /* Cor de fundo para o rodapé */
+    color: white;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-container div {
+    flex: 1;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 15px;
+
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #ff6347;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding: 15px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
