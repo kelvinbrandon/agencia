@@ -1,3 +1,4 @@
+/* RESET GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -5,468 +6,502 @@
 }
 
 
-.header {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 40px;
-    background-color: #111;
-    color: white;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-}
-
-
-.menu ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.menu a:hover {
-    color: #ff6347;
-}
-
-
-
+/* BODY */
 body {
     padding-top: 70px;
 }
 
 
 
+/* =========================
+   HEADER
+========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    padding: 30px 40px;
+
+    background-color: #111;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.header__item {
+    display: flex;
+}
+
+.header__link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.header__link:hover {
+    color: #ff6347;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
 .hero {
     height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px;
-}
 
-.hero {
+    padding: 80px;
+
     background: url("../setor.css/imagem/fundo.jpg") no-repeat center center/cover;
+
     color: white;
 }
 
-.hero-conteudo {
+.hero__content {
     text-align: center;
     max-width: 600px;
-
 }
 
-.hero h1 {
+.hero__title {
     font-size: 3rem;
     margin-bottom: 20px;
-    line-height: 1.2
+    line-height: 1.2;
 }
 
-.hero p {
+.hero__description {
     font-size: 1.2rem;
     margin-bottom: 20px;
-
 }
 
-
-
-
-.botao {
+.hero__button {
     display: inline-block;
+
     padding: 12px 25px;
+
     background-color: #ff6600;
+
     color: white;
+
     border-radius: 5px;
+
     text-decoration: none;
-    transition: 0.3s;
+
+    transition: background-color 0.3s ease;
 }
 
-
-.botao:hover {
+.hero__button:hover {
     background-color: #ff4500;
 }
 
 
-.servicos {
-    padding: 80px 40px;
-    background-color: #f5f5f5;
-    text-align: center;
 
+/* =========================
+   SERVICES
+========================= */
+.services {
+    padding: 80px 40px;
+
+    background-color: #f5f5f5;
+
+    text-align: center;
 }
 
-
-.servicos h2 {
+.services__title {
     font-size: 2.5rem;
+
     margin-bottom: 40px;
 }
 
-
-.servicos-container {
+.services__container {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 
     max-width: 1200px;
+
     margin: 0 auto;
 }
 
-
-.card {
+.services__card {
     background: white;
+
     padding: 20px;
+
     border-radius: 8px;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+
+    transition: transform 0.3s ease;
 }
 
-.card:hover {
+.services__card:hover {
     transform: translateY(-5px);
 }
 
-.card h3 {
+.services__card-title {
     margin-bottom: 10px;
-
 }
 
-.card p {
-    font-size: 0, 95rem;
+.services__card-description {
+    font-size: 0.95rem;
 }
-
-
 
 @media (max-width: 768px) {
-    .servicos-container {
+    .services__container {
         grid-template-columns: 1fr;
     }
 }
 
 
 
-.sobre {
+/* =========================
+   ABOUT
+========================= */
+.about {
     padding: 80px 20px;
+
     background-color: #fff;
 }
 
-
-.sobre-container {
+.about__container {
     display: flex;
-    /* Adiciona flexbox para layout */
+
     align-items: center;
-    /* Alinha os itens verticalmente */
+
     gap: 40px;
-    /* Espaçamento entre os itens */
 
     max-width: 1200px;
-    /* Limita a largura máxima do container */
+
     margin: 0 auto;
-    /* Centraliza o container horizontalmente */
 }
 
-
-.sobre-texto {
+.about__content {
     flex: 1;
-    /* Permite que o texto ocupe o espaço disponível */
 }
 
-.sobre-texto h2 {
+.about__title {
     font-size: 2.5rem;
-    /* Tamanho da fonte para o título da seção "Sobre Nós" */
+
     margin-bottom: 20px;
-    /* Espaçamento abaixo do título da seção "Sobre Nós" */
 }
 
-.sobre-texto p {
+.about__text {
     line-height: 1.6;
-    /* Melhora a legibilidade do texto */
+
     margin-bottom: 15px;
-    /* Espaçamento abaixo de cada parágrafo */
 }
 
-.sobre-imagem {
+.about__image {
     flex: 1;
-    /* Permite que a imagem ocupe o espaço disponível */
+
     min-height: 350px;
-    /* Define uma altura mínima para a imagem, garantindo que ela seja visível mesmo em telas menores */
 
     background: url("../setor.css/imagem/equipe.jpg") center/cover;
-    /* Define a imagem de fundo para a seção "Sobre Nós" e ajusta seu posicionamento e tamanho */
 
     border-radius: 15px;
-    /* Adiciona bordas arredondadas à imagem */
 
-    transition: 0.4s;
+    transition: transform 0.4s ease;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+
+    overflow: hidden;
 }
 
-.sobre-imagem:hover {
+.about__image:hover {
     transform: scale(1.03);
 }
 
-.sobre-imagem {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.sobre-imagem {
-    position: relative;
-    /* Permite posicionar elementos filhos de forma absoluta em relação a esta imagem */
-    overflow: hidden;
-    /* Garante que qualquer conteúdo que ultrapasse os limites da imagem seja ocultado */
-}
-
-.sobre-imagem::after {
+.about__image::after {
     content: "";
-    /* Cria um pseudo-elemento para o efeito de overlay */
+
     position: absolute;
-    /* Posiciona o pseudo-elemento de forma absoluta em relação à imagem */
+
     inset: 0;
-    /* Faz com que o pseudo-elemento cubra toda a área da imagem */
 
     background: rgba(0, 0, 0, 0.2);
 
     opacity: 0;
-    transition: 0.3s;
+
+    transition: opacity 0.3s ease;
 }
 
-.sobre-imagem:hover::after {
+.about__image:hover::after {
     opacity: 1;
 }
 
-
 @media (max-width: 768px) {
-    .sobre-container {
+    .about__container {
         flex-direction: column;
-        /* Altera para layout em coluna em telas menores */
     }
 }
 
 
 
-.depoimentos {
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonials {
     padding: 80px 20px;
-    /* Espaçamento interno para a seção de depoimentos */
+
     background-color: #f5f5f5;
-    /* Cor de fundo para a seção de depoimentos */
+
     text-align: center;
-    /* Centraliza o texto dentro da seção de depoimentos */
 }
 
-
-.depoimentos h2 {
+.testimonials__title {
     font-size: 2.5rem;
-    /* Tamanho da fonte para o título dos depoimentos */
+
     margin-bottom: 40px;
-    /* Espaçamento abaixo do título dos depoimentos */
 }
 
-
-.depoimentos-container {
+.testimonials__container {
     display: grid;
-    /* Utiliza grid layout para organizar os depoimentos */
+
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Define colunas responsivas para os depoimentos */
+
     gap: 20px;
-    /* Espaçamento entre os depoimentos */
 
     max-width: 1200px;
-    /* Limita a largura máxima do container de depoimentos */
-    margin: auto;
-    /* Centraliza o container de depoimentos horizontalmente */
+
+    margin: 0 auto;
 }
 
-
-
-.depoimento {
+.testimonials__card {
     background: white;
-    /* Cor de fundo para cada depoimento */
+
     padding: 20px;
-    /* Espaçamento interno para cada depoimento */
+
     border-radius: 10px;
-    /* Adiciona bordas arredondadas aos depoimentos */
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Adiciona sombra para dar profundidade aos depoimentos */
-    transition: 0.3s;
-    /* Adiciona uma transição suave para efeitos de hover */
+
+    transition: transform 0.3s ease;
 }
 
-
-.depoimento:hover {
+.testimonials__card:hover {
     transform: translateY(-5px);
-    /* Move o depoimento para cima quando o mouse passar sobre ele */
 }
 
-
-.depoimento p {
+.testimonials__text {
     font-style: italic;
-    /* Estiliza o texto do depoimento em itálico */
+
     margin-bottom: 15px;
-    /* Espaçamento abaixo do texto do depoimento */
 }
 
-.depoimento h4 {
-    color: #ff6347;
-    /* Cor para o nome do cliente no depoimento */
-}
-
-.depoimento p::before {
+.testimonials__text::before {
     content: "“";
+
     font-size: 2rem;
+
+    color: #ff6347;
+}
+
+.testimonials__author {
     color: #ff6347;
 }
 
 
 
-.contato {
+/* =========================
+   CONTACT
+========================= */
+.contact {
     padding: 50px 40px;
+
     background-color: #fff;
+
     text-align: center;
 }
 
-
-.contato h2 {
+.contact__title {
     font-size: 2.5rem;
+
     margin-bottom: 40px;
 }
 
-
-.contato-container {
+.contact__container {
     display: flex;
+
     gap: 40px;
+
     align-items: center;
 }
 
-
-.contato-info {
+.contact__info {
     flex: 1;
+
     text-align: left;
 }
 
-.formulario {
-    gap: 10px;
-    flex: 1;
+.contact__form {
     display: flex;
+
     flex-direction: column;
+
+    flex: 1;
+
+    gap: 10px;
 }
 
-.formulario input,
-.formulario textarea {
-
+.contact__input,
+.contact__textarea {
     padding: 12px;
+
     margin-bottom: 15px;
+
     border: 1px solid #ccc;
+
     border-radius: 20px;
+
     font-size: 1rem;
 
-    transition: 0.3s;
+    transition: border-color 0.3s ease;
 }
 
+.contact__input:hover,
+.contact__textarea:hover {
+    border-color: #ff6347;
+}
 
-.formulario textarea {
+.contact__textarea {
     resize: none;
-    /* Impede que o usuário redimensione a área de texto */
+
     height: 120px;
-    /* Define uma altura fixa para a área de texto */
-
 }
 
-.formulario button {
+.contact__button {
     padding: 14px;
-    font-width: bold;
-    background: #ff6347;
-    color: white;
-    border: none;
-    /* Remove a borda padrão do botão */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    /* Adiciona uma transição suave para efeitos de hover */
 
+    font-weight: bold;
+
+    background: #ff6347;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
 }
 
-.formulario button:hover {
+.contact__button:hover {
     background: #e5533d;
 }
 
 @media (max-width: 768px) {
-    .contato-container {
+    .contact__container {
         flex-direction: column;
     }
 }
 
-.formulario input:hover,
-.formulario textarea:hover {
-    border-color: #ff6347;
-}
 
 
-
+/* =========================
+   FOOTER
+========================= */
 .footer {
-    background: linear-gradient(120deg, #000, #222);
-
     background: #111;
-    /* Cor de fundo para o rodapé */
+
     color: white;
+
     padding: 50px 20px 20px;
 }
 
-.footer-container {
+.footer__container {
     display: flex;
+
     justify-content: space-between;
+
     gap: 40px;
 
     max-width: 1200px;
+
     margin: 0 auto;
+
     flex-wrap: wrap;
 }
 
-.footer-container div {
+.footer__column {
     flex: 1;
 }
 
-.footer h3,
-.footer h4 {
+.footer__title,
+.footer__subtitle {
     margin-bottom: 15px;
-
 }
 
-.footer ul {
+.footer__list {
     list-style: none;
 }
 
-.footer a {
-
+.footer__link {
     color: #ccc;
+
     text-decoration: none;
+
     display: block;
+
     margin-bottom: 10px;
-    transition: 0.3s;
+
+    transition: color 0.3s ease;
 }
 
-.footer a:hover {
+.footer__link:hover {
     color: #ff6347;
 }
 
-.footer-bottom {
+.footer__bottom {
     text-align: center;
+
     margin-top: 30px;
+
     border-top: 1px solid #333;
+
     padding: 15px;
+
     font-size: 0.9rem;
+
     opacity: 0.7;
 }
 
 @media (max-width: 768px) {
-    .footer-container {
+    .footer__container {
         flex-direction: column;
+
         text-align: center;
     }
 }
