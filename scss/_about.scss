@@ -1,0 +1,87 @@
+/* =========================
+   ABOUT
+========================= */
+@use "variaveis" as *;
+@use "sass:math" as matc;
+
+.about {
+    padding: ($espacamento-grande * 2) matc.div($espacamento-padrao, 2);
+    
+
+    background-color: #fff;
+
+
+    &__container {
+        display: flex;
+
+        align-items: center;
+
+        gap: 40px;
+
+        max-width: 1200px;
+
+        margin: 0 auto;
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        line-height: 1.6;
+
+        margin-bottom: 15px;
+    }
+
+    &__image {
+        flex: 1;
+
+        min-height: 350px;
+
+        background: url("../setor.css/imagem/equipe.jpg") center/cover;
+
+        border-radius: 15px;
+
+        transition: transform 0.4s ease;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    &__image:hover {
+        transform: scale(1.03);
+    }
+
+    &__image::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.2);
+
+        opacity: 0;
+
+        transition: opacity 0.3s ease;
+    }
+
+    &__image:hover::after {
+        opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        .about__container {
+            flex-direction: column;
+        }
+    }
+}

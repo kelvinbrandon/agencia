@@ -1,0 +1,23 @@
+@use "variaveis" as *;
+
+
+
+/*flex centralizado*/
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*botao padrao*/
+
+@mixin botao-padrao {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: $cor-primaria;
+    color: $cor-clara;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}

@@ -1,0 +1,19 @@
+@use "sass:color";
+@use "variaveis" as *;
+
+@use "mixins" as *;
+
+.botao {
+    @include botao-padrao;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.card{
+    background-color: $cor-clara;
+    padding: &espacamento-padrao;
+    border-radius: 8px;
+    
+}

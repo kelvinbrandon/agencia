@@ -1,0 +1,58 @@
+/* =========================
+   HERO
+========================= */
+.hero {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px;
+
+    background: url("../setor.css/imagem/fundo.jpg") no-repeat center center/cover;
+
+    color: white;
+
+
+    &__content {
+        text-align: center;
+        max-width: 600px;
+    }
+
+
+    &__title {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+
+    &__description {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+
+    &__button {
+        display: inline-block;
+
+        padding: 12px 25px;
+
+        background-color: #ff6600;
+
+        color: white;
+
+        border-radius: 5px;
+
+        text-decoration: none;
+
+        transition: background-color 0.3s ease;
+    }
+
+
+
+    &__button:hover {
+        background-color: #ff4500;
+    }
+}

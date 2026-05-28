@@ -1,0 +1,16 @@
+@use 'variaveis' as *;
+@use 'mixins' as *;
+
+
+.header{
+    display: flex;
+    justify-content: espace-between;
+    align-items: center;
+    padding: $espacamento-padrao $espacamento-grande;
+    background-color: $cor-primaria;
+    color:&cor-clara;
+    
+}
+
+
+
